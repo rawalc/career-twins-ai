@@ -300,6 +300,7 @@
             <div class="logo">Career Twins</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><button class="upload-button" onclick="window.open('https://app.autotuneresume.com/login', '_blank')" style="margin: 0; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Sign Up</button></li>
             </ul>
         </nav>
     </header>
@@ -311,7 +312,7 @@
                 <p class="hero-subtitle">Tell your network once, we'll remind them when perfect jobs appear</p>
                 
                 <div class="upload-section">
-                    <div class="upload-area" onclick="triggerFileInput()">
+                    <div class="upload-area" onclick="window.open('https://app.autotuneresume.com/login', '_blank')">
                         <svg class="upload-icon" viewBox="0 0 100 100" fill="none">
                             <path d="M50 20L50 70M30 40L50 20L70 40" stroke="#666" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M20 70L20 80C20 82.2 21.8 84 24 84L76 84C78.2 84 80 82.2 80 80L80 70" stroke="#666" stroke-width="3" stroke-linecap="round"/>
@@ -320,7 +321,7 @@
                         <div class="upload-content">
                             <div class="upload-text">Drop your resume here</div>
                             <div class="upload-subtext">or click to browse • PDF, DOC, DOCX</div>
-                            <button class="upload-button" type="button">Upload Resume</button>
+                            <button class="upload-button" type="button" onclick="window.open('https://app.autotuneresume.com/login', '_blank')">Upload Resume</button>
                         </div>
                         
                         <div class="processing">
@@ -331,6 +332,7 @@
                     
                     <input type="file" class="file-input" accept=".pdf,.doc,.docx" onchange="handleFileUpload(event)">
                 </div>
+                
             </div>
         </section>
 
@@ -399,22 +401,8 @@
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (file) {
-                // Show processing state
-                document.querySelector('.upload-content').style.display = 'none';
-                document.querySelector('.processing').classList.add('active');
-                
-                // Simulate processing
-                setTimeout(() => {
-                    document.querySelector('.processing').classList.remove('active');
-                    document.querySelector('.upload-content').style.display = 'block';
-                    
-                    // Update upload area
-                    document.querySelector('.upload-text').textContent = `✓ ${file.name} uploaded`;
-                    document.querySelector('.upload-subtext').textContent = 'Processing complete • We\'ll be in touch soon';
-                    document.querySelector('.upload-button').textContent = 'Upload Another';
-                    document.querySelector('.upload-area').style.borderColor = '#10b981';
-                    document.querySelector('.upload-area').style.background = '#f0fdf4';
-                }, 3000);
+                // Redirect to app immediately
+                window.open('https://app.autotuneresume.com/login', '_blank');
             }
         }
 
