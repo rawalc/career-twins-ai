@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerTwins.ai Job Referrals </title>
+    <title>Career Twins AI advisor</title>
     <style>
         :root {
             --rolling-height: 4.8rem;
@@ -101,7 +101,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            white-space: nowrap;
+            text-align: center;
+            padding: 0 10px;
+            flex-shrink: 0;
+            box-sizing: border-box;
         }
 
         .dots-container {
@@ -402,13 +405,15 @@
         /* Responsive */
         @media (max-width: 768px) {
             :root {
-                --rolling-height: 2.2rem;
+                --rolling-height: 8rem;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 height: var(--rolling-height);
-                margin-bottom: 2.5rem;
+                margin-bottom: 2rem;
+                padding: 0 20px;
+                line-height: 1.4;
             }
 
             .hero-subtitle {
@@ -662,7 +667,7 @@
 
         function goToIndex(index) {
             currentIndex = index;
-            const itemHeight = items[0].offsetHeight;
+            const itemHeight = items[0].getBoundingClientRect().height;
             rollingWrapper.style.transform = `translateY(-${currentIndex * itemHeight}px)`;
             updateDots();
             resetInterval();
@@ -670,7 +675,7 @@
 
         function rotateHeadline() {
             currentIndex = (currentIndex + 1) % items.length;
-            const itemHeight = items[0].offsetHeight;
+            const itemHeight = items[0].getBoundingClientRect().height;
             rollingWrapper.style.transform = `translateY(-${currentIndex * itemHeight}px)`;
             updateDots();
         }
