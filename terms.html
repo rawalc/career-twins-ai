@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service – CareerTwins</title>
+    <meta name="description"
+        content="CareerTwins Terms of Service. Read our terms governing the use of our AI-powered career advising, resume analysis, mock interview, and peer feedback services.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* Terms Content */
+        .terms-hero {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .terms-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-hero .effective-date {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px 5rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #fafafa;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .toc ol {
+            padding-left: 1.5rem;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .toc a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .terms-section {
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 80px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .terms-section h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #111;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .terms-section p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul,
+        .terms-section ol {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        .terms-section strong {
+            color: #111;
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: #f8f8f8;
+            border-left: 4px solid #000;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .callout-warning {
+            border-left-color: #d4a017;
+            background: #fffdf5;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-to-top:hover {
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .terms-content {
+                padding: 2rem 20px 3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">CareerTwins</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How it works</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="terms-hero">
+            <div class="container">
+                <h1>Terms of Service</h1>
+                <p class="effective-date">Effective Date: March 8, 2026</p>
+            </div>
+        </section>
+
+        <div class="terms-content">
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#service-description">Description of Service</a></li>
+                    <li><a href="#payments">Fees and Payments</a></li>
+                    <li><a href="#user-content">User Content & Ownership</a></li>
+                    <li><a href="#acceptable-use">Acceptable Use Policy</a></li>
+                    <li><a href="#ai-services">AI-Powered Services & Disclaimers</a></li>
+                    <li><a href="#peer-feedback">Peer Feedback Services</a></li>
+                    <li><a href="#intellectual-property">Our Intellectual Property Rights</a></li>
+                    <li><a href="#third-party">Third-Party Links & Services</a></li>
+                    <li><a href="#warranties">Disclaimer of Warranties</a></li>
+                    <li><a href="#limitation">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#dispute-resolution">Dispute Resolution & Arbitration</a></li>
+                    <li><a href="#california">California-Specific Provisions</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#modifications">Modifications to Service and Terms</a></li>
+                    <li><a href="#miscellaneous">Miscellaneous</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ol>
+            </div>
+
+            <!-- 1. Acceptance of Terms -->
+            <section id="acceptance" class="terms-section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you,"
+                    or "your") and CareerTwins ("Company," "we," "us," or "our"), governing your access to and use of
+                    the CareerTwins.com website, mobile applications, APIs, and all related services (collectively, the
+                    "Service").</p>
+                <p><strong>By accessing or using our Service, you acknowledge that you have read, understood, and agree
+                        to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>, which is
+                        incorporated herein by reference.</strong> If you do not agree to these Terms, you must not
+                    access or use the Service.</p>
+                <p>If you are using the Service on behalf of an organization, you represent and warrant that you have
+                    the authority to bind that organization to these Terms, and "you" refers to both you individually
+                    and that organization.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 2. Eligibility -->
+            <section id="eligibility" class="terms-section">
+                <h2>2. Eligibility</h2>
+                <p>You must be at least 16 years of age to use the Service. By using the Service, you represent and
+                    warrant that:</p>
+                <ul>
+                    <li>You are at least 16 years old (or the age of majority in your jurisdiction, whichever is
+                        greater).</li>
+                    <li>You have the legal capacity to enter into a binding agreement.</li>
+                    <li>You are not prohibited from using the Service under any applicable law.</li>
+                    <li>Your use of the Service will not violate any applicable law or regulation.</li>
+                </ul>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 3. Description of Service -->
+            <section id="service-description" class="terms-section">
+                <h2>3. Description of Service</h2>
+                <p>CareerTwins provides an AI-powered career advancement platform that includes the following core
+                    features:</p>
+                <ul>
+                    <li><strong>AI Resume Analysis:</strong> Automated analysis of your resume against job descriptions
+                        to identify skill matches, gaps, and optimization opportunities.</li>
+                    <li><strong>Mock Interview Practice:</strong> AI-driven simulated interview sessions that provide
+                        real-time feedback on your responses, communication style, and interview readiness.</li>
+                    <li><strong>AI Interview Feedback:</strong> Automated assessments of interview performance including
+                        content quality, delivery, and alignment with role requirements.</li>
+                    <li><strong>Peer Feedback:</strong> When requested by users, facilitation of peer-to-peer review and
+                        feedback on resumes, interview responses, and career materials from other users or invited
+                        participants.</li>
+                    <li><strong>Job Matching:</strong> AI-powered recommendations for job opportunities based on your
+                        skills, experience, and preferences.</li>
+                    <li><strong>Career Insights:</strong> Personalized analytics, recommendations, and guidance to
+                        support your job search and career development.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Service Availability:</strong> Some features may be in beta, limited release, or marked
+                        as "coming soon." We reserve the right to modify, suspend, or discontinue any feature at any
+                        time without prior notice.</p>
+                </div>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 4. Fees and Payments -->
+            <section id="payments" class="terms-section">
+                <h2>4. Fees and Payments</h2>
+                <p>Certain features of the Service may require payment of fees. If you elect to use paid features, you
+                    agree to the pricing and payment terms as posted on the Service.</p>
+
+                <h3>4.1 Subscriptions</h3>
+                <p>Paid subscriptions are billed in advance on a recurring basis (e.g., monthly). Your subscription will
+                    automatically renew under the same conditions unless you cancel it through your account settings or
+                    by contacting us.</p>
+
+                <h3>4.2 Payments</h3>
+                <p>All payments are processed by third-party payment processors. By providing payment information, you
+                    represent that you are authorized to use the chosen payment method.</p>
+
+                <h3>4.3 Refunds</h3>
+                <p>Except as required by law, all fees paid are <strong>non-refundable</strong>. If you believe you have
+                    been billed in error, please contact us within thirty (30) days of the billing date.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 5. User Content & Ownership -->
+            <section id="user-content" class="terms-section">
+                <h2>5. User Content & Ownership</h2>
+                <p>Our Service allows you to upload, submit, store, and share content, including resumes, cover letters,
+                    job descriptions, and interview responses ("User Content").</p>
+
+                <h3>5.1 Ownership of User Content</h3>
+                <p>As between you and CareerTwins, <strong>you retain all ownership rights in your User
+                        Content</strong>.
+                    We do not claim ownership of the materials you provide to the Service.</p>
+
+                <h3>5.2 Licensing of User Content</h3>
+                <p>By providing User Content, you grant CareerTwins a worldwide, non-exclusive, royalty-free,
+                    sublicensable, and transferable license to host, store, use, display, reproduce, and process your
+                    content solely for the purposes of:</p>
+                <ul>
+                    <li>Providing and operating the Service, including AI analysis, job matching, and feedback features.
+                    </li>
+                    <li>Improving and developing our Service, including utilizing anonymized or pseudonymized data to
+                        train,
+                        fine-tune, and improve our proprietary artificial intelligence models and machine learning
+                        algorithms.</li>
+                    <li>Complying with applicable law or legal process.</li>
+                </ul>
+                <p>This license terminates when you delete your User Content or your account, except for: (a) content
+                    already processed into anonymized, aggregated datasets; (b) residual copies in backup systems
+                    overwritten in ordinary course within 90 days; and (c) content retained as required by law.</p>
+
+                <h3>5.3 Representations About Your Content</h3>
+                <p>By submitting User Content, you represent and warrant that:</p>
+                <ul>
+                    <li>You own or have the necessary rights, licenses, and permissions to submit the content.</li>
+                    <li>Your content is truthful and accurate to the best of your knowledge.</li>
+                    <li>Your content does not infringe, misappropriate, or violate the intellectual property, privacy,
+                        or other rights of any third party.</li>
+                    <li>Your content does not contain any content that is unlawful, harmful, threatening, defamatory,
+                        obscene, or otherwise objectionable.</li>
+                </ul>
+
+                <h3>5.4 Sensitive Data</h3>
+                <p>You acknowledge that the Service processes sensitive personal information including PII (personally
+                    identifiable information) contained in resumes and career materials. Please review our <a
+                        href="privacy.html">Privacy Policy</a> for details on how we handle this data. <strong>Do not
+                        submit Social Security numbers, financial account information, or government-issued
+                        identification numbers through the Service.</strong></p>
+
+                <div class="callout callout-warning">
+                    <p><strong>Warning:</strong> You are solely responsible for ensuring that any personal data of third
+                        parties (e.g., references, recommenders) included in your User Content has been shared with
+                        their knowledge and consent.</p>
+                </div>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 6. Acceptable Use Policy -->
+            <section id="acceptable-use" class="terms-section">
+                <h2>6. Acceptable Use Policy</h2>
+                <p>You agree not to use the Service to:</p>
+                <ul>
+                    <li>Upload false, misleading, or fraudulent resumes or career information.</li>
+                    <li>Impersonate any person or entity, or falsely state or misrepresent your affiliation with any
+                        person or entity.</li>
+                    <li>Harvest, scrape, or collect data from the Service by automated means (bots, scrapers, spiders)
+                        without our written permission.</li>
+                    <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code or algorithms of
+                        the Service, including our AI models.</li>
+                    <li>Circumvent, disable, or interfere with security-related features of the Service.</li>
+                    <li>Use the Service to develop a competing product or service.</li>
+                    <li>Submit content that contains malware, viruses, or any other harmful code.</li>
+                    <li>Attempt to gain unauthorized access to any part of the Service, other users' accounts, or any
+                        systems or networks connected to the Service.</li>
+                    <li>Use the Service in any manner that could damage, disable, overburden, or impair the Service or
+                        interfere with any other party's use of the Service.</li>
+                    <li>Engage in any activity that violates any applicable local, state, national, or international law
+                        or regulation.</li>
+                    <li>Provide harassing, abusive, threatening, or discriminatory feedback to other users through the
+                        peer feedback system.</li>
+                </ul>
+                <p>Violation of this Acceptable Use Policy may result in immediate termination of your account without
+                    notice or refund.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 7. AI-Powered Services & Disclaimers -->
+            <section id="ai-services" class="terms-section">
+                <h2>7. AI-Powered Services & Disclaimers</h2>
+                <p>CareerTwins utilizes artificial intelligence and machine learning to provide career advising and
+                    analysis.</p>
+
+                <h3>7.1 Ownership of AI Output</h3>
+                <p>As between you and CareerTwins, <strong>you own the specific output generated by the AI</strong> in
+                    response to your inputs (e.g., your rewritten resume bullets or personalized feedback). You may use
+                    this output for any personal or professional purpose, provided it does not violate these Terms.</p>
+
+                <h3>7.2 Disclaimers</h3>
+                <p>You acknowledge and agree that:</p>
+                <ul>
+                    <li><strong>AI is not human.</strong> Outputs are generated by algorithms and may contain errors,
+                        biases, or inaccuracies. You should review and verify all AI-generated content.</li>
+                    <li><strong>No professional advice.</strong> The Service provides career guidance, not legal,
+                        financial, or professional career counseling advice.</li>
+                    <li><strong>No guarantee of results.</strong> We do not guarantee that using our Service will result
+                        in job interviews, job offers, salary increases, or any specific career outcome.</li>
+                    <li><strong>AI models evolve.</strong> Our AI models and algorithms, which may incorporate
+                        third-party Large Language Models (LLMs), are continuously updated and improved, which may
+                        result in different outputs for the same inputs over time.</li>
+                </ul>
+
+                <h3>7.3 Mock Interview Simulations</h3>
+                <p>Our mock interview feature simulates interview scenarios using AI. You acknowledge that:</p>
+                <ul>
+                    <li>Mock interviews do not replicate the full experience of a real job interview.</li>
+                    <li>AI-generated interview questions and feedback reflect general patterns and may not match the
+                        specific practices of any employer.</li>
+                    <li>Mock interview recordings and transcripts are processed and stored as described in our <a
+                            href="privacy.html">Privacy Policy</a>.</li>
+                    <li>Performance assessments are based on AI analysis and are inherently limited. They should not be
+                        treated as definitive evaluations of your interview capabilities.</li>
+                </ul>
+
+                <h3>7.4 AI Bias Disclaimer</h3>
+                <p>While we actively work to identify and mitigate biases in our AI systems, no AI system is entirely
+                    free from bias. AI outputs may reflect biases present in training data. We encourage users to
+                    consider AI feedback as one of many data points in their career development process.</p>
+
+                <div class="callout">
+                    <p><strong>Important:</strong> You should never rely solely on AI-generated feedback from Career
+                        Twins for critical career decisions. Always seek advice from qualified career professionals,
+                        mentors, and trusted advisors.</p>
+                </div>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 8. Peer Feedback Services -->
+            <section id="peer-feedback" class="terms-section">
+                <h2>8. Peer Feedback Services</h2>
+                <p>The Service allows you to request feedback from other users ("Reviewers") on your career materials
+                    and
+                    interview performance.</p>
+
+                <h3>8.1 Section 230 Protection</h3>
+                <p>CareerTwins is a provider of an "interactive computer service" under the <strong>Communications
+                        Decency
+                        Act, 47 U.S.C. § 230</strong>. You acknowledge that CareerTwins is not the publisher or speaker
+                    of
+                    User Content, including peer feedback, and shall not be held liable for any defamatory, offensive,
+                    or
+                    illegal conduct of any Reviewer or other third party.</p>
+
+                <h3>8.2 User Expectations</h3>
+                <p>You acknowledge and agree that:</p>
+                <ul>
+                    <li><strong>Peer feedback is user-generated content.</strong> CareerTwins does not endorse, verify,
+                        or guarantee the accuracy, quality, or usefulness of any peer feedback.</li>
+                    <li><strong>Sharing is voluntary.</strong> When you request peer feedback, you understand that your
+                        shared materials (resume excerpts, interview responses, etc.) will be visible to the Reviewers
+                        you designate.</li>
+                    <li><strong>No employment relationship.</strong> Reviewers are not employees, contractors, or agents
+                        of CareerTwins. We are not responsible for the opinions, advice, or conduct of Reviewers.</li>
+                </ul>
+
+                <h3>8.3 Reviewer Obligations</h3>
+                <p>If you participate as a Reviewer, you agree to:</p>
+                <ul>
+                    <li>Provide honest, constructive, and professional feedback.</li>
+                    <li>Not copy, download, distribute, or retain the User Content shared with you beyond what is
+                        necessary to provide feedback.</li>
+                    <li>Not use information obtained through peer review for any purpose other than providing the
+                        requested feedback, including solicitation, recruitment, or competitive purposes.</li>
+                    <li>Maintain the confidentiality of all materials shared with you.</li>
+                    <li>Refrain from any discriminatory, harassing, or abusive behavior.</li>
+                </ul>
+
+                <h3>8.4 Limitation on Peer Feedback Liability</h3>
+                <p><strong>CareerTwins is not liable for any damages arising from peer feedback, including but not
+                        limited to emotional distress, lost opportunities, or decisions made based on peer
+                        feedback.</strong> You use the peer feedback feature at your own risk.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 9. Our Intellectual Property Rights -->
+            <section id="intellectual-property" class="terms-section">
+                <h2>9. Our Intellectual Property Rights</h2>
+                <h3>9.1 Ownership</h3>
+                <p>The Service, including but not limited to its design, text, graphics, logos, icons, images, audio
+                    clips, software, code, AI models, algorithms, data compilations, and underlying technology, is the
+                    exclusive property of CareerTwins or its licensors and is protected by United States and
+                    international intellectual property laws.</p>
+
+                <h3>9.2 Restrictions</h3>
+                <p>You may not, without our prior written consent:</p>
+                <ul>
+                    <li>Copy, modify, distribute, sell, lease, or create derivative works of any part of the Service.
+                    </li>
+                    <li>Use any data mining, robots, or similar data gathering methods on the Service.</li>
+                    <li>Frame or mirror any portion of the Service.</li>
+                    <li>Use our trademarks, service marks, or trade dress without prior written authorization.</li>
+                    <li>Extract or re-utilize any substantial portion of the contents of the Service.</li>
+                </ul>
+
+                <h3>9.3 Feedback to Us</h3>
+                <p>If you provide us with any feedback, suggestions, or ideas regarding the Service ("Feedback"), you
+                    hereby assign to us all right, title, and interest in such Feedback. We are free to use the Feedback
+                    for any purpose without compensation or attribution to you.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 10. Third-Party Links & Services -->
+            <section id="third-party" class="terms-section">
+                <h2>10. Third-Party Links & Services</h2>
+                <p>The Service may contain links to third-party websites, services, or resources that are not owned or
+                    controlled by CareerTwins. We do not endorse or assume any responsibility for any such third-party
+                    sites, services, or resources.</p>
+                <p>If you access any third-party website, service, or resource from the Service, you do so at your own
+                    risk, and you understand that these Terms and our Privacy Policy do not apply to your use of such
+                    sites. You expressly relieve CareerTwins from any and all liability arising from your use of any
+                    third-party website, service, or resource.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 11. Disclaimer of Warranties -->
+            <section id="warranties" class="terms-section">
+                <h2>11. Disclaimer of Warranties</h2>
+                <div class="callout callout-warning">
+                    <p><strong>PLEASE READ THIS SECTION CAREFULLY. IT LIMITS OUR OBLIGATIONS TO YOU.</strong></p>
+                </div>
+                <p><strong>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY
+                        KIND, EITHER EXPRESS OR IMPLIED.</strong> To the fullest extent permitted by applicable law,
+                    CareerTwins expressly disclaims all warranties, whether express, implied, statutory, or otherwise,
+                    including but not limited to:</p>
+                <ul>
+                    <li><strong>IMPLIED WARRANTIES</strong> of merchantability, fitness for a particular purpose, title,
+                        and non-infringement.</li>
+                    <li><strong>WARRANTIES REGARDING AI OUTPUT</strong> — we do not warrant that AI-generated content,
+                        resume feedback, interview assessments, job matches, or career recommendations will be accurate,
+                        complete, reliable, current, or error-free.</li>
+                    <li><strong>WARRANTIES REGARDING AVAILABILITY</strong> — we do not warrant that the Service will be
+                        uninterrupted, timely, secure, or free of viruses or other harmful components.</li>
+                    <li><strong>WARRANTIES REGARDING OUTCOMES</strong> — we do not warrant that use of the Service will
+                        result in employment, interviews, improved career prospects, or any specific outcome.</li>
+                    <li><strong>WARRANTIES REGARDING PEER FEEDBACK</strong> — we do not warrant the quality, accuracy,
+                        or usefulness of feedback provided by other users.</li>
+                </ul>
+                <p>You acknowledge that you use the Service at your sole risk. No information or advice, whether oral or
+                    written, obtained from CareerTwins or through the Service, shall create any warranty not expressly
+                    stated herein.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 12. Limitation of Liability -->
+            <section id="limitation" class="terms-section">
+                <h2>12. Limitation of Liability</h2>
+                <div class="callout callout-warning">
+                    <p><strong>PLEASE READ THIS SECTION CAREFULLY. IT LIMITS OUR LIABILITY TO YOU.</strong></p>
+                </div>
+                <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL CAREERTWINS, ITS
+                        FOUNDERS, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AFFILIATES, SUCCESSORS, OR ASSIGNS
+                        (COLLECTIVELY, THE "CAREERTWINS PARTIES") BE LIABLE FOR:</strong></p>
+                <ul>
+                    <li>Any <strong>indirect, incidental, special, consequential, punitive, or exemplary
+                            damages</strong>, including but not limited to damages for loss of profits, goodwill, data,
+                        business opportunities, or other intangible losses.</li>
+                    <li>Any damages arising from <strong>reliance on AI-generated content</strong>, including resume
+                        feedback, interview feedback, career recommendations, or job-matching results.</li>
+                    <li>Any damages arising from <strong>peer feedback</strong>, including feedback that is inaccurate,
+                        unhelpful, biased, or harmful.</li>
+                    <li>Any <strong>unauthorized access to or alteration of your data</strong>, including resume data
+                        and PII.</li>
+                    <li>Any <strong>loss of employment opportunities</strong>, job offers, or career advancement,
+                        whether or not related to use of the Service.</li>
+                    <li>Any damages arising from the <strong>conduct of other users</strong>, including through the peer
+                        feedback system.</li>
+                    <li>Any damages arising from <strong>service interruptions</strong>, bugs, errors, or data loss.
+                    </li>
+                </ul>
+                <p><strong>IN NO EVENT SHALL THE TOTAL AGGREGATE LIABILITY OF THE CAREERTWINS PARTIES FOR ALL CLAIMS
+                        ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE EXCEED THE GREATER OF: (A) THE AMOUNTS
+                        YOU PAID TO US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED DOLLARS
+                        ($100.00 USD).</strong></p>
+                <p>THE LIMITATIONS IN THIS SECTION APPLY REGARDLESS OF THE THEORY OF LIABILITY, WHETHER BASED ON
+                    WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, AND
+                    EVEN IF THE CAREERTWINS PARTIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</strong></p>
+                <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In such
+                    jurisdictions, our liability shall be limited to the fullest extent permitted by law.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 13. Indemnification -->
+            <section id="indemnification" class="terms-section">
+                <h2>13. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless the CareerTwins Parties from and against any and
+                    all claims, demands, damages, losses, liabilities, costs, and expenses (including reasonable
+                    attorneys' fees and court costs) arising out of or relating to:</p>
+                <ul>
+                    <li>Your use of or access to the Service.</li>
+                    <li>Your User Content, including any claims that your content infringes or violates the rights of
+                        any third party.</li>
+                    <li>Your violation of these Terms.</li>
+                    <li>Your violation of any applicable law or regulation.</li>
+                    <li>Your participation in the peer feedback system, whether as a requestor or a Reviewer.</li>
+                    <li>Any disputes between you and other users of the Service.</li>
+                </ul>
+                <p>We reserve the right, at your expense, to assume the exclusive defense and control of any matter for
+                    which you are required to indemnify us, and you agree to cooperate with our defense of such claims.
+                </p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 14. Dispute Resolution & Arbitration -->
+            <section id="dispute-resolution" class="terms-section">
+                <h2>14. Dispute Resolution & Arbitration</h2>
+
+                <div class="callout callout-warning">
+                    <p><strong>IMPORTANT: THIS SECTION CONTAINS A BINDING ARBITRATION CLAUSE AND CLASS ACTION WAIVER.
+                            PLEASE READ IT CAREFULLY. IT AFFECTS YOUR LEGAL RIGHTS.</strong></p>
+                </div>
+
+                <h3>14.1 Informal Resolution</h3>
+                <p>Before initiating any formal dispute resolution procedure, you agree to first contact us at
+                    <strong>info@careertwins.com</strong> and attempt to resolve the dispute informally for at least 30
+                    days.
+                </p>
+
+                <h3>14.2 Binding Arbitration</h3>
+                <p>If the dispute cannot be resolved informally, you and CareerTwins agree that any dispute, claim, or
+                    controversy arising out of or relating to these Terms or the Service (including the validity,
+                    enforceability, or scope of this arbitration provision) shall be resolved exclusively through
+                    <strong>final and binding arbitration</strong> administered by the American Arbitration Association
+                    ("AAA") under its Commercial Arbitration Rules.
+                </p>
+                <ul>
+                    <li>Arbitration shall take place in the State of California, or at another mutually agreed location.
+                    </li>
+                    <li>The arbitration shall be conducted by a single arbitrator.</li>
+                    <li>The arbitrator's decision shall be final and binding, and judgment on the arbitration award may
+                        be entered in any court of competent jurisdiction.</li>
+                    <li>Each party shall bear its own costs and attorneys' fees, unless the arbitrator determines
+                        otherwise.</li>
+                </ul>
+
+                <h3>14.3 Class Action Waiver</h3>
+                <p><strong>YOU AND CAREERTWINS AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS
+                        INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS,
+                        CONSOLIDATED, OR REPRESENTATIVE PROCEEDING.</strong> The arbitrator may not consolidate more
+                    than one person's claims and may not preside over any form of representative or class proceeding.
+                </p>
+
+                <h3>14.4 Exceptions</h3>
+                <p>Notwithstanding the above, either party may seek injunctive or other equitable relief in any court of
+                    competent jurisdiction to prevent the actual or threatened infringement of a party's intellectual
+                    property rights. Additionally, claims within the jurisdiction of small claims court may be filed in
+                    such court.</p>
+
+                <h3>14.5 Opt-Out</h3>
+                <p>You may opt out of this arbitration provision by sending written notice to
+                    <strong>info@careertwins.com</strong> within 30 days of first accepting these Terms. Your notice
+                    must include your name, address, email address, and a clear statement that you wish to opt out of
+                    the arbitration provision.
+                </p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 15. California-Specific Provisions -->
+            <section id="california" class="terms-section">
+                <h2>15. California-Specific Provisions</h2>
+
+                <h3>15.1 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>State of
+                        California</strong>, without regard to its conflict of law provisions. To the extent litigation
+                    is permitted under these Terms, you and CareerTwins consent to the exclusive jurisdiction of the
+                    state and federal courts located in California.</p>
+
+                <h3>15.2 California Consumer Rights</h3>
+                <p>Under California Civil Code Section 1789.3, California users are entitled to the following specific
+                    consumer rights notice: The Complaint Assistance Unit of the Division of Consumer Services of the
+                    California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd.,
+                    Suite N 112, Sacramento, CA 95834, or by telephone at (916) 445-1254 or (800) 952-5210.</p>
+
+                <h3>15.3 California Privacy Rights</h3>
+                <p>For information about your California privacy rights under the CCPA/CPRA, please see our <a
+                        href="privacy.html">Privacy Policy</a>.</p>
+
+                <h3>15.4 Electronic Communications</h3>
+                <p>Under California Civil Code Section 1633.1 et seq. (the Uniform Electronic Transactions Act), your
+                    agreement to these Terms and any notices provided in electronic form have the same legal effect as
+                    if provided in writing.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 16. Termination -->
+            <section id="termination" class="terms-section">
+                <h2>16. Termination</h2>
+
+                <h3>16.1 Termination by You</h3>
+                <p>You may terminate your account at any time by following the instructions within the Service or by
+                    contacting us at <strong>info@careertwins.com</strong>. Upon termination, your right to use the
+                    Service will immediately cease.</p>
+
+                <h3>16.2 Termination by Us</h3>
+                <p>We reserve the right to suspend or terminate your account and access to the Service at any time, with
+                    or without cause and with or without notice, including if we reasonably believe that:</p>
+                <ul>
+                    <li>You have violated these Terms or the Acceptable Use Policy.</li>
+                    <li>You have engaged in fraudulent or illegal activity.</li>
+                    <li>Your account poses a security risk to the Service or other users.</li>
+                    <li>Continued provision of the Service to you is no longer commercially viable.</li>
+                </ul>
+
+                <h3>16.3 Effect of Termination</h3>
+                <p>Upon termination, the following provisions shall survive: User Content licenses (to the extent
+                    described in Section 5.2), Disclaimer of Warranties, Limitation of Liability, Indemnification,
+                    Dispute Resolution, and any other provisions that by their nature should survive termination.</p>
+                <p>We will handle deletion of your personal data upon termination in accordance with our <a
+                        href="privacy.html">Privacy Policy</a>.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 17. Modifications to Service and Terms -->
+            <section id="modifications" class="terms-section">
+                <h2>17. Modifications to Service and Terms</h2>
+                <p>We reserve the right to modify these Terms at any time. When we make material changes, we will:</p>
+                <ul>
+                    <li>Update the "Effective Date" at the top of this page.</li>
+                    <li>Provide notice through the Service or via email to your registered email address.</li>
+                    <li>Where required by law, obtain your affirmative consent before the changes take effect.</li>
+                </ul>
+                <p>Your continued use of the Service after the effective date of revised Terms constitutes your
+                    acceptance of those changes. If you do not agree to the revised Terms, you must stop using the
+                    Service and terminate your account.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 17. General Provisions -->
+            <section id="general" class="terms-section">
+                <h2>17. General Provisions</h2>
+
+                <h3>17.1 Entire Agreement</h3>
+                <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a> and any other policies
+                    referenced herein, constitute the entire agreement between you and CareerTwins with respect to the
+                    Service and supersede all prior or contemporaneous agreements, understandings, or representations.
+                </p>
+
+                <h3>17.2 Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable or invalid by a court of competent
+                    jurisdiction, that provision shall be enforced to the maximum extent permissible, and the remaining
+                    provisions shall remain in full force and effect.</p>
+
+                <h3>17.3 Waiver</h3>
+                <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such
+                    right or provision. Any waiver must be in writing and signed by CareerTwins to be effective.</p>
+
+                <h3>17.4 Assignment</h3>
+                <p>You may not assign or transfer these Terms, or any rights or obligations hereunder, without our prior
+                    written consent. We may assign these Terms without restriction, including in connection with a
+                    merger, acquisition, or sale of assets.</p>
+
+                <h3>17.5 Force Majeure</h3>
+                <p>CareerTwins shall not be liable for any failure or delay in performing our obligations under these
+                    Terms due to causes beyond our reasonable control, including but not limited to natural disasters,
+                    war, terrorism, labor disputes, government actions, internet or infrastructure failures, or
+                    pandemics.</p>
+
+                <h3>17.6 Notices</h3>
+                <p>We may provide notices to you via email to the address associated with your account, through in-app
+                    notifications, or by posting on the Service. You may provide notices to us by emailing
+                    <strong>info@careertwins.com</strong>.
+                </p>
+
+                <h3>17.7 No Third-Party Beneficiaries</h3>
+                <p>These Terms do not create any third-party beneficiary rights in any individual or entity that is not
+                    a party to these Terms.</p>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+            <!-- 19. Contact Us -->
+            <section id="contact" class="terms-section">
+                <h2>19. Contact Us</h2>
+                <p>If you have any questions or concerns regarding these Terms, please contact us at
+                    <strong>info@careertwins.com</strong>.
+                </p>
+                <ul>
+                    <li><strong>Privacy:</strong> <a href="mailto:info@careertwins.com">info@careertwins.com</a>
+                    </li>
+                    <li><strong>Website:</strong> <a href="https://careertwins.com">CareerTwins.com</a></li>
+                </ul>
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CareerTwins</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
